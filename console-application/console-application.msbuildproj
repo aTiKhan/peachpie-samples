@@ -1,13 +1,11 @@
-﻿<Project Sdk="Peachpie.NET.Sdk/0.9.46">
-
+﻿<Project Sdk="Peachpie.NET.Sdk/1.0.0">
   <PropertyGroup>
     <OutputType>exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <Description>Simpliest PHP project for .NET Core, a console app.</Description>
+    <TargetFramework>net5.0</TargetFramework>
+    <StartupObject>main.php</StartupObject>
   </PropertyGroup>
-
   <ItemGroup>
-    <Compile Include="**/*.php" />
+    <Compile Include="**/*.php;*.phar" />
+    <Content Include="**/*.json" Exclude=".*/**;bin/**;obj/**;" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
-  
 </Project>
